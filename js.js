@@ -19,8 +19,13 @@ console.log(shuffleArray(dates))
 
 
 function backgroundColor(e) {
-  e.target.classList.add('green');
-}
+    const color = document.querySelector('.green')
+    e.target.classList.add('green');
+    if(color){ 
+      color.classList.remove('green');
+      console.log(color);
+    }
+  }
 
  dates.forEach(function(date){
    const box = document.createElement('li');
